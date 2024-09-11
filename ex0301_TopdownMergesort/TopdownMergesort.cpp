@@ -22,7 +22,6 @@ bool CheckSorted(std::vector<int>& v) {
 class TopDownMerge {
  public:
   void Sort(std::vector<int>& v) {
-    count = 0;
     aux.resize(v.size());
 
     SortHelper(v, 0, v.size() - 1);
@@ -66,7 +65,6 @@ class TopDownMerge {
     Merge(v, lo, mid, hi);
   }
   std::vector<int> aux;
-  int count = 0;
 };
 
 int main(void) {
