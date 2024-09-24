@@ -328,59 +328,48 @@ class RedBlackBST {
 };
 
 int main() {
-  // SEARCHXMPL 순서로 추가
-  {
-    RedBlackBST bst;
+  RedBlackBST bst;
 
-    std::string keys = std::string("SEARCHXMPL");
+  std::string keys = std::string("SEARCHXMPL");
 
-    for (char c : keys) {
-      std::cout << "Insert: " << std::string(1, c) << '\n';
-      bst.Insert(std::string(1, c), int(c));
-      //   bst.Print2D();
-    }
-
-    //// Search 테스트
-    // for (char c : keys) {
-    //   std::cout << c << " " << int(c) << " " << bst.Search(std::string(1, c))
-    //             << '\n';
-    // }
-
-    bst.Print2D();
-
-    for (char c : keys) {
-      std::cout << "Delete: " << std::string(1, c) << '\n';
-      bst.Delete(std::string(1, c));
-      bst.Print2D();
-    }
-    return 0;
-
-    // while (!bst.IsEmpty()) {
-    //   std::cout << "DeleteMin: " << bst.Min() << '\n';
-    //   bst.DeleteMin();
-    //   bst.Print2D();
-    // }
-    // std::cout << '\n';
-
-    // while (!bst.IsEmpty()) {
-    //   std::cout << "DeleteMax: " << bst.Max() << '\n';
-    //   bst.DeleteMax();
-    //   bst.Print2D();
-    // }
-    std::cout << '\n';
+  // Insert Test
+  for (char c : keys) {
+    std::cout << "Insert: " << std::string(1, c) << '\n';
+    bst.Insert(std::string(1, c), int(c));
+    // 디버깅용 Print2D
+    // bst.Print2D();
   }
 
-  // ACEHLMPRSX 순서로 추가
-  //{
-  //	RedBlackBST bst;
+  // Search Test
+  for (char c : keys) {
+    std::cout << c << " " << int(c) << " " << bst.Search(std::string(1, c))
+              << '\n';
+  }
+  bst.Print2D();
 
-  //	for (char c : string("ACEHLMPRSX"))
-  //	{
-  //		cout << "Insert: " << string(1, c) << endl;
-  //		bst.Insert(string(1, c), int(c));
-  //		bst.Print2D();
-  //	}
-  //}
+  // Delete Test
+  //   for (char c : keys) {
+  //     std::cout << "Delete: " << std::string(1, c) << '\n';
+  //     bst.Delete(std::string(1, c));
+  //     bst.Print2D();
+  //   }
+  //   return 0;
+
+  // DeleteMin Test
+  // while (!bst.IsEmpty()) {
+  //   std::cout << "DeleteMin: " << bst.Min() << '\n';
+  //   bst.DeleteMin();
+  //   bst.Print2D();
+  // }
+  // std::cout << '\n';
+
+  // DeleteMax Test
+  // while (!bst.IsEmpty()) {
+  //   std::cout << "DeleteMax: " << bst.Max() << '\n';
+  //   bst.DeleteMax();
+  //   bst.Print2D();
+  // }
+  std::cout << '\n';
 
   return 0;
 }
